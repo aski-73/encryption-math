@@ -67,6 +67,10 @@ describe('PolynomFactorizer.ts', () => {
         grad: 4,
         value: 9,
       },
+      {
+        grad: 3,
+        value: 5,
+      },
     ];
     const f: PolynomFactorizer = new PolynomFactorizer(5, 11, 'ist egal.');
     const newPolynom: PolynomValue[] = [];
@@ -213,5 +217,16 @@ describe('PolynomFactorizer.ts', () => {
       .toContain('(X - 2)');
     expect(s)
       .toContain('(X - 4)');
+  });
+
+  /**
+   * HIER EINTRAGEN
+   */
+  it('factorizes A4 of klaukry_20210301 correctly', () => {
+    const str = '1X^5 + 4X^4 + 1X^3 + 0X^2 + 4X^1 + 0X^0';
+    const f: PolynomFactorizer = new PolynomFactorizer(5, 7, str);
+
+    const s: string = f.factorization();
+    console.log(s);
   });
 });

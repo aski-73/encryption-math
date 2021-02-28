@@ -12,6 +12,9 @@ module.exports = {
     ecmaVersion: 2020,
   },
   rules: {
+    'no-param-reassign': 'off',
+    'no-underscore-dangle': 'off',
+    'prefer-destructuring': 'off',
     'semi': 'off',
     'no-plusplus': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
